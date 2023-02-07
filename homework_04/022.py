@@ -22,7 +22,7 @@ A = inputList(n, 'A')
 print('-'*20)
 
 m = int(input('Введите количество элементов в наборе B: '))
-B = inputList(n, 'B')
+B = inputList(m, 'B')
 
 print(f'\nA = {A}\nB = {B}\n' + '-'*20)
 
