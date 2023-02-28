@@ -44,7 +44,7 @@ def CountContacts(DB_name: str):
 		return 0
 
 
-def PrintByTemplateMain(main_dict):
+def PrintByTemplateMain(main_dict: dict):
 	output_string = ''
 	for key in main_dict.keys():
 		output_string += key + ": " + main_dict[key] + "\n"
@@ -74,6 +74,7 @@ def ReadItemsFromDB(DB_name: str):
 	except:
 		return False
 
+
 def ReadOneItem(DB_name: str, ID: int):
 	items = ReadItemsFromDB(DB_name)
 	if items:
@@ -83,6 +84,7 @@ def ReadOneItem(DB_name: str, ID: int):
 				return item
 	else:
 		return False
+
 
 def DeleteByID(DB_name: str, ID: int):
 	items = ReadItemsFromDB(DB_name)

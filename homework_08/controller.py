@@ -46,12 +46,14 @@ def ReadContacts(headers: dict, DB_filename: str):
 	else:
 		return False
 
+
 def DeleteContact(DB_filename: str):
 	try:
 		id_del = int(input("\n\nВведите [id] контакта для удаления: "))
 		return model.DeleteByID(DB_filename, id_del)
 	except:
 		return False
+
 
 def SearchContacts(headers: dict, DB_filename: str):
 	search_map = {'query': ['значение для поиска', 'notEmpty', 'не должно быть пустым']} 
@@ -72,6 +74,7 @@ def SearchContacts(headers: dict, DB_filename: str):
 		return True
 	return False
 
+
 def EditContact(input_map: list, DB_filename: str):
 	try:
 		id_edit = int(input("\n\nВведите [id] контакта для редактирования: "))
@@ -79,7 +82,7 @@ def EditContact(input_map: list, DB_filename: str):
 		if item:
 			print(model.PrintByTemplateItem(item))
 			print("Редактирование: ")
-			
+
 			edited_item = [id_edit]
 			input_data = InputData(input_map)
 
